@@ -1,19 +1,21 @@
 
 export function TwitterFolloCard({name,userName, isFollowing}){
-    const imageScr= `https://unavatar.io/${userName}`
+     console.log(isFollowing);
+     const addAt=(userName)=> `@${userName}`
+     
     return (
         <article>
             <header>
-                <img src={imageScr} alt="imagen usando avatar"/>
+                <img src={`https://unavatar.io/${userName}`} alt="imagen usando avatar"/>
                 <div>
                     <strong>{name}</strong>
-                    <span>{userName}</span>
+                    <span>{addAt(userName)}</span>
                 </div>
             </header>
             
             <aside>
                 <button>
-                    {isFollowing}
+                    Seguir
                 </button>
             </aside>
         </article>
