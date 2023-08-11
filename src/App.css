@@ -5,13 +5,14 @@ article{
     color: #fff;
     font-size: .8rem;
     background-color: #222;
-    width: 80%;
+    /* width: 800px */
 }
 
 article header{
     display: flex;
     align-items: center;
     gap: 4px;
+    width: 100%;
 }
 
 article header div{
