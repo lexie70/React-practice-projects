@@ -1,21 +1,28 @@
+import { useState } from "react";
+export function TwitterFolloCard({ userName, children }){
+    const [isFollowing,setIsFollowing]= useState(false)
 
-export function TwitterFolloCard({name,userName, isFollowing,handleAdd}){
-     console.log(isFollowing);
-    //  const addAt=(userName)=> `@${userName}`
+     const text= isFollowing ? "siguiendo" : "seguir"
+     const clases = isFollowing ? "isfollowing" : "notfollowing"
+
+     const handleClick = () => { 
+        setIsFollowing(!isFollowing);
+        console.log(isFollowing);
+    }
      
     return (
         <article>
             <header>
                 <img src={`https://unavatar.io/${userName}`} alt="imagen usando avatar"/>
                 <div>
-                    <strong>{name}</strong>
-                    <span>{handleAdd(userName)}</span>
+                    <strong>{children}</strong>
+                    <span>@{userName}</span>
                 </div>
             </header>
             
-            <aside>
-                <button>
-                    Seguir
+            <aside >
+                <button className={clases} onClick={handleClick}>
+                    {text}
                 </button>
             </aside>
         </article>

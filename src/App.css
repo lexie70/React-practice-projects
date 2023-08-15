@@ -30,9 +30,19 @@ article img{
     border-radius: 1000px;
 }
 article button{
+    cursor: pointer;
     margin-left: 16px;
     border: 0;
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    transition:  .3s ease background-color;
+}
+
+.isfollowing:hover{
+background-color: red;
+}
+
+.notfollowing:hover{
+background-color: blue;
 }
