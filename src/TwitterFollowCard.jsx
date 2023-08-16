@@ -7,7 +7,7 @@ export function TwitterFolloCard({ userName, children }){
 
      const handleClick = () => { 
         setIsFollowing(!isFollowing);
-        console.log(isFollowing);
+        // console.log(isFollowing);
     }
      
     return (
