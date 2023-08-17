@@ -22,7 +22,9 @@ export function TwitterFolloCard({ userName, children }){
             
             <aside >
                 <button className={clases} onClick={handleClick}>
-                    {text}
+                   
+                    <span className="inicial-text">{text}</span>
+                    <span className="stopFollow">Dejar de seguir</span>
                 </button>
             </aside>
         </article>

@@ -37,12 +37,35 @@ article button{
     padding: 6px 16px;
     font-weight: bold;
     transition:  .3s ease background-color;
+    opacity: .8;
 }
 
 .isfollowing:hover{
-background-color: red;
+background-color: rgb(64, 2, 2);
+color: red;
 }
 
 .notfollowing:hover{
-background-color: blue;
+background-color: rgb(125, 122, 122);
+}
+
+.inicial-text{
+    display: block;
+    visibility: visible;
+    /* background-color: blue; */
+}
+
+.stopFollow{
+    display: none;
+    visibility: hidden;
+}
+
+.isfollowing:hover .inicial-text{
+display: none;
+visibility: hidden;
+}
+.isfollowing:hover .stopFollow{
+    display: block;
+    visibility: visible;
+    width: 100px;
 }
